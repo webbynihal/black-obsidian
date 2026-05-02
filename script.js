@@ -13,53 +13,70 @@ let doc = document.addEventListener('DOMContentLoaded', () => {
     const whatsappBtn = document.querySelector('.whatsapp-btn');
 
     const footerJoinBtn = document.querySelector('.footer-join-btn');
-    
+
+    const actionnavbtn = document.querySelector(".popupbox");
+
+    const actionbtn2 = document.querySelector(".popbox");
+
+
+    function both() {
+        let append = actionnavbtn.cloneNode(true);
+        actionnavbtn.style.display = 'flex';
+        actionbtn2.style.display = 'flex';
+
+        actionnavbtn.addEventListener('click', () => {
+            actionnavbtn.style.display = 'none';
+            actionbtn2.style.display = 'none';
+        });
+    }
+
     const notificationBar = document.createElement('div');
     notificationBar.id = 'notification-bar';
     document.body.appendChild(notificationBar);
-    
+
     let notificationTimeout;
     function showNotification(message) {
         notificationBar.textContent = message;
         notificationBar.classList.add('show');
-        
+
         clearTimeout(notificationTimeout);
         notificationTimeout = setTimeout(() => {
             notificationBar.classList.remove('show');
-        }, 3000); 
+        }, 3000);
     }
 
     if (navBtn) {
         navBtn.addEventListener('click', () => {
-            showNotification('Paise hai tere paas, Gareeb!! ');
+            return both()
         });
     }
 
     if (heroBtn) {
         heroBtn.addEventListener('click', () => {
-            showNotification('ek baar me samjh nahi ayi');
+          return both()
         });
     }
 
     if (aboutBtn) {
         aboutBtn.addEventListener('click', () => {
-            showNotification('About section ka "Learn More" button click hua!');
+            showNotification('Updates coming soon!');
         });
     }
 
     membershipBtns.forEach(button => {
         button.addEventListener('click', () => {
-            showNotification('Membership ka "Buy Now" button click hua!');
+            showNotification('Updates coming soon!');
         });
     });
 
     trainerBtns.forEach(button => {
         button.addEventListener('click', () => {
-            showNotification('Trainer ka "View Profile" button click hua!');
+            showNotification('Updates coming soon!');
         });
     });
 
-    if (footerJoinBtn) footerJoinBtn.addEventListener('click', () => showNotification('Footer ka "Join Now" button click hua!'));
+
+    if (footerJoinBtn) footerJoinBtn.addEventListener('click', () => showNotification('Updates coming soon!'));
 
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
