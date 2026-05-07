@@ -19,6 +19,10 @@ header {
     z-index: 1000;
 }
 
+.mobile-hero {
+    display: none;
+}
+
 .popupbox {
     height: 100vh;
     width: 100vw;
@@ -254,6 +258,7 @@ section {
     position: absolute;
     height: auto;
     width: auto;
+    top: 0;
     left: 7.7%;
     display: block;
     object-fit: cover;
@@ -337,7 +342,7 @@ section {
     position: relative;
     flex-direction: row;
     padding: 20px;
-    
+
 }
 
 .about-text-content {
@@ -378,7 +383,7 @@ b {
     color: #940ab3;
 }
 
-.closebtn{
+.closebtn {
     color: #7902f7;
     font-size: 18px;
     display: inline;
@@ -1171,40 +1176,52 @@ nav>ul>li>a:hover {
 
     #hero {
         height: auto;
-        min-height: 80vh;
+        min-height: 71vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 40px 15px;
         text-align: center;
-        background-color: #07000b;
+        box-shadow: inset 0 0 1000px black;
+        background-color: black;
     }
 
+    .heroimage {
+        position: absolute;
+        height: 70vh;
+        width: auto;
+        display: block;
+        object-fit: contain;
+        border-radius: 10px;
+        filter: brightness(60%);
+    }
+    
     .stylebox {
-        display: none;
+       display: none;
     }
 
     .h1,
     .h2,
     .herobtn {
         position: relative;
-        margin: 10px auto;
+        margin: 4px auto;
         text-align: center;
         left: auto;
-        top: auto;
+        top: 214px;
     }
 
     .h1 {
-        font-size: 38px;
-        margin-top: 20px;
+        font-size: 30px;
     }
 
     .punchline {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .h2 {
-        font-size: 30px;
+        font-size: 28px;
+        margin-bottom:5px ;
+          
     }
 
     .herobtn {
@@ -1212,21 +1229,6 @@ nav>ul>li>a:hover {
         margin-bottom: 20px;
     }
 
-    .heroimage {
-        position: relative;
-        height: auto;
-        width: 95%;
-        max-width: 400px;
-        top: auto;
-        left: auto;
-        margin-top: 40px;
-    }
-
-    .heroimage img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
 
     #about {
         flex-direction: column;
