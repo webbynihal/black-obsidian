@@ -53,12 +53,14 @@ header {
     border-radius: 30px;
     animation: come-on 0.3s ease;
 }
+
 @keyframes come-on {
-    from{
+    from {
         transform: scale(0.8);
     }
-    to{
-      transform: scale(1);
+
+    to {
+        transform: scale(1);
     }
 }
 
@@ -335,6 +337,7 @@ section {
     position: relative;
     flex-direction: row;
     padding: 20px;
+    
 }
 
 .about-text-content {
@@ -360,8 +363,27 @@ section {
     margin: 20px 0;
 }
 
+.about-text-content>.art {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    margin: 20px 0;
+    display: none;
+}
+
+.about-text-content>.art::before {
+    opacity: 0;
+}
+
 b {
     color: #940ab3;
+}
+
+.closebtn{
+    color: #7902f7;
+    font-size: 18px;
+    display: inline;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .aboutbtn {
@@ -1255,7 +1277,7 @@ nav>ul>li>a:hover {
         margin: 0;
     }
 
-   .popupbox>.popbox {
+    .popupbox>.popbox {
         align-items: center;
         height: 30vh;
         width: 80vw;
@@ -1272,16 +1294,19 @@ nav>ul>li>a:hover {
         font-size: 20px;
         margin-top: 10px;
     }
-    .popbox>.whatsappbtn{
+
+    .popbox>.whatsappbtn {
         font-size: 20px;
         margin: 0;
         text-decoration: none;
     }
-    .popbox>.article{
+
+    .popbox>.article {
         font-size: 12px;
         margin: 0;
     }
-    .popbox>.line{
+
+    .popbox>.line {
         margin: 1px;
     }
 }

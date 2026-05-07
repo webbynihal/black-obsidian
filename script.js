@@ -18,6 +18,10 @@ let doc = document.addEventListener('DOMContentLoaded', () => {
 
     const actionbtn2 = document.querySelector(".popbox");
 
+    const expandabt = document.querySelector(".art");
+
+    let abtclose = document.querySelector(".closebtn");
+
 
     function both() {
         let append = actionnavbtn.cloneNode(true);
@@ -28,6 +32,21 @@ let doc = document.addEventListener('DOMContentLoaded', () => {
             actionnavbtn.style.display = 'none';
             actionbtn2.style.display = 'none';
         });
+    }
+
+    function aboutexpand() {
+        let abtexp = expandabt.style.display = 'inline';
+
+        let a = abtclose;
+        a.addEventListener('click', () => {
+            expandabt.style.display = 'none';
+            aboutBtn.style.display = 'flex'
+        });
+
+        if (aboutBtn) {
+            return aboutBtn.style.display = 'none'
+        }
+      
     }
 
     const notificationBar = document.createElement('div');
@@ -53,13 +72,13 @@ let doc = document.addEventListener('DOMContentLoaded', () => {
 
     if (heroBtn) {
         heroBtn.addEventListener('click', () => {
-          return both()
+            return both()
         });
     }
 
     if (aboutBtn) {
         aboutBtn.addEventListener('click', () => {
-            showNotification('Updates coming soon!');
+            return aboutexpand()
         });
     }
 
